@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>9</java.version>
-        <start-class>com.erabanq.erabackend.Application</start-class>
+        <start-class>live.bodies.Application</start-class>
     </properties>
 
     <build>

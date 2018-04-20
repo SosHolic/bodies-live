@@ -1,2 +1,3 @@
-# bodies-live
-school project for bodies live
+# Bodies life
+Project for people.
+http://bodies.life/

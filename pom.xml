@@ -10,8 +10,125 @@
         <version>2.0.0.RELEASE</version>
     </parent>
 
-    <groupId>com.erabanq</groupId>
-    <artifactId>psp</artifactId>
+    <groupId>sk.holic.sos</groupId>
+    <artifactId>bodies-live</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>9</java.version>
+        <start-class>com.erabanq.erabackend.Application</start-class>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>--add-modules java.base,java.xml.bind</argLine>
+                </configuration>
+            </plugin>
+            <!--<plugin>-->
+            <!--<groupId>org.liquibase</groupId>-->
+            <!--<artifactId>liquibase-maven-plugin</artifactId>-->
+            <!--<version>3.6.0-SNAPSHOT</version>-->
+            <!--<configuration>-->
+            <!--<propertyFile>liquibase.properties</propertyFile>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+        </plugins>
+    </build>
+
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-rest-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.cloud.sql</groupId>
+            <artifactId>mysql-socket-factory</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.16</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-data-rest</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.xebia.extras</groupId>
+            <artifactId>selma-processor</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>fr.xebia.extras</groupId>
+            <artifactId>selma</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -6,4 +6,3 @@ public class User {
 	private String lastname;
 	private int age;
 	}
-	

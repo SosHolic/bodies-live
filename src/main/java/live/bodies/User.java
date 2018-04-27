@@ -1,9 +1,8 @@
-package live.bodie;
+package live.bodies;
 
 public class User {
-	private int ID;
-	private String fisrtname;
-	private String lastname;
-	private int age;
-	}
-	
+    private int idMartinTlachac;
+    private String fisrtname;
+    private String lastname;
+    private int age;
+}

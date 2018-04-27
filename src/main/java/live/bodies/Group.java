@@ -1,8 +1,7 @@
 public class Group {
-	private long id;
-	private boolean privatee;
-	private String name;
+    private long id;
+    private boolean privatee;
+    private String name;
 
-	
-	
+
 }

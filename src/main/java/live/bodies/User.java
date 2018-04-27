@@ -1,7 +1,7 @@
 package live.bodies;
 
 public class User {
-	private int idTeofilHurb;
+	private int id;
 	private String fisrtname;
 	private String lastname;
 	private int age;

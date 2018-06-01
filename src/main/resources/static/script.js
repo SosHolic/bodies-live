@@ -56,7 +56,7 @@ function showPosition(position) {
                        console.log(json);
                     },
                     error: function(request, textStatus, errorThrown) {
-                       console.log("error");
+                       console.log("zle");
                     }
                 });
 }

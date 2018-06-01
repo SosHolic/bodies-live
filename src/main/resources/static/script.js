@@ -36,7 +36,7 @@ function showPosition(position) {
         mymap.on('click', onMapClick);
 
         $.ajax({
-            url: "/user/add?longtitude=12.454&langtitude=78454",
+            url: "/user/add?longtitude="+long+"&langtitude="+lang,
             type: 'GET',
             contentType: 'json',
             success: function(json) {

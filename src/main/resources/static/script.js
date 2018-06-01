@@ -37,15 +37,28 @@ function showPosition(position) {
 
         $.ajax({
             url: "/user/add?longtitude="+long+"&langtitude="+lang,
+            url: "/user/add?longtitude="+long+"&langtitude="lang,
             type: 'GET',
             contentType: 'json',
             success: function(json) {
-               console.log("success");
+               console.log(json);
             },
             error: function(request, textStatus, errorThrown) {
                console.log("error");
             }
         });
+
+         $.ajax({
+                    url: "/user/getAll?longtitude="+long+"&langtitude="lang,
+                    type: 'GET',
+                    contentType: 'json',
+                    success: function(json) {
+                       console.log(json);
+                    },
+                    error: function(request, textStatus, errorThrown) {
+                       console.log("error");
+                    }
+                });
 }
 
 
